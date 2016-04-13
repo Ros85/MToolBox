@@ -383,6 +383,7 @@ fastq_input()
 		-I OUT.sam.bam \
 		-o OUT.realigned.bam \
 		-targetIntervals ${mtoolbox_folder}/data/intervals_file_${ref}.list  \
+		-disable_auto_index_creation_and_locking_when_reading_rods ${mtoolbox_folder}/data/MITOMAP_HMTDB_known_indels_${ref}.vcf.idx \
 		-known ${mtoolbox_folder}/data/MITOMAP_HMTDB_known_indels_${ref}.vcf \
 		-compress 0;
 		check_exit_status; cd ..; done
